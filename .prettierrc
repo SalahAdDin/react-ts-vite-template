@@ -1,0 +1,30 @@
+{
+  "parser": "typescript",
+  "printWidth": 80,
+  "arrowParens": "always",
+  "singleQuote": true,
+  "semi": true,
+  "tabWidth": 2,
+  "endOfLine": "auto",
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["*.js", "*.cjs", "*.mjs"],
+      "options": {
+        "parser": "javascript"
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": ["*.json", "*.jsonc", ".babelrc", ".prettierrc"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

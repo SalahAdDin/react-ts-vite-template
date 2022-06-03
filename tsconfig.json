@@ -14,8 +14,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@application/*": ["application/*"],
+      "@domain/*": ["domain/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@presentation/*": ["presentation/*"]
+    }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "jest.config.ts",
+    "vite.config.ts" //TypeScript will not automatically use project references to resolve files
+  ],
+  "exclude": ["node_modules", "coverage"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
