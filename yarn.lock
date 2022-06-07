@@ -3899,6 +3899,11 @@ react@^18.0.0:
   dependencies:
     loose-envify "^1.1.0"
 
+redaxios@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/redaxios/-/redaxios-0.5.0.tgz#321aca81880b14da2fd83be82731876a1513e83b"
+  integrity sha512-qmEJjQF0igI+H9SDKlQdWz6XskJ5zm2s6KPY0AvtlbQtRNe1OcuJIfxGmySDCpoU18/UtC7zWEFIWpkHMZ1/Ow==
+
 redent@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/redent/-/redent-3.0.0.tgz#e557b7998316bb53c9f1f56fa626352c6963059f"
@@ -4545,6 +4550,11 @@ walker@^1.0.7:
   integrity sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==
   dependencies:
     makeerror "1.0.12"
+
+web-vitals@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.4.tgz#76563175a475a5e835264d373704f9dde718290c"
+  integrity sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==
 
 webidl-conversions@^7.0.0:
   version "7.0.0"
