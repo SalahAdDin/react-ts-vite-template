@@ -25,7 +25,7 @@
   },
   "include": [
     "src",
-    "jest.config.ts",
+    "commitlint.config.ts",
     "vite.config.ts" //TypeScript will not automatically use project references to resolve files
   ],
   "exclude": ["node_modules", "coverage"],

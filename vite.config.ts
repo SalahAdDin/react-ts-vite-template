@@ -27,6 +27,7 @@ export default defineConfig({
       lines: 80,
       statements: -10,
     },
+    passWithNoTests: true,
     environment: 'happy-dom',
     setupFiles: './src/vitest.setup.ts',
   },
