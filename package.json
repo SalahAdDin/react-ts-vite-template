@@ -10,8 +10,12 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --watch --coverage --ui",
     "test:ui": "vitest --watch --ui",
-    "format": "prettier --write \"**/*.+(ts|tsx|json)\"",
+    "lint": "npx eslint src",
     "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "prettier --write \"**/*.+(ts|tsx|json)\"",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "lint-staged": "lint-staged",
     "type-check": "tsc",
     "prepare": "husky install"
   },

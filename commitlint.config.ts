@@ -148,7 +148,8 @@ const rules: QualifiedRules = {
 };
 
 const Configuration: UserConfig = {
-  helpUrl: 'https://github.com/Planable/commitlint-config#emoji-descriptions=',
+  helpUrl:
+    'https://github.com/SalahAdDin/react-ts-vite-template#emojitype-descriptions',
   parserPreset,
   plugins: [planablePlugin],
   rules,
