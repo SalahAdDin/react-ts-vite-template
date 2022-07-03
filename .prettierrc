@@ -7,6 +7,17 @@
   "tabWidth": 2,
   "endOfLine": "auto",
   "trailingComma": "all",
+  "useTabs": false,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "importOrder": [
+    "^(^react$|@react|react|^recoil$)",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^[./]"
+  ],
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
