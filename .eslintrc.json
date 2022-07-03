@@ -7,7 +7,6 @@
     "plugin:import/typescript",
     "plugin:testing-library/react",
     "plugin:jsx-a11y/recommended",
-    "plugin:jest/recommended",
     "plugin:prettier/recommended",
     "airbnb",
     "airbnb-typescript",
@@ -58,7 +57,6 @@
   },
   "env": {
     "browser": true,
-    "jest": true,
     "es2021": true
   }
 }
