@@ -17,18 +17,19 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --watch --coverage --ui",
     "test:ui": "vitest --watch --ui",
-    "lint": "npx eslint src",
-    "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
-    "prettier": "npx prettier src --check",
-    "prettier:fix": "prettier --write \"**/*.+(ts|tsx|json)\"",
-    "format": "npm run prettier:fix && npm run lint:fix",
+    "lint": "eslint src",
+    "lint:fix": "lint -- --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier -- --write",
+    "format": "prettier:fix && lint:fix",
     "lint-staged": "lint-staged",
     "type-check": "tsc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "commit"
   },
   "lint-staged": {
-    "*.+(js|jsx|ts|tsx)": "eslint --fix",
-    "*.+(json|css)": "prettier --write"
+    "*.{js,jsx,ts,tsx}": ["prettier:fix", "lint:fix"],
+    "*.json": ["prettier --write"]
   },
   "dependencies": {
     "nanoid": "4.0.0",
