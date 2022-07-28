@@ -1,7 +1,14 @@
 {
   "name": "react-ts-vite-template",
+  "description": "Boilerplate for React/Typescript, built on top of Vite ⚡️",
   "private": true,
   "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/main.tsx",
+  "author": "Luis Alaguna <alagunasalahaddin@live.com>",
+  "homepage": "https://github.com/SalahAdDin/react-ts-vite-template#readme",
+  "repository": "github:SalahAdDin/react-ts-vite-template.git",
+  "bugs": "https://github.com/SalahAdDin/react-ts-vite-template/issues",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -27,12 +34,12 @@
     "nanoid": "4.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "redaxios": "0.5.0",
-    "web-vitals": "2.1.4"
+    "redaxios": "0.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@commitlint/prompt-cli": "^17.0.3",
     "@commitlint/types": "^17.0.0",
     "@testing-library/dom": "8.14.0",
     "@testing-library/jest-dom": "5.16.4",
@@ -67,5 +74,14 @@
     "vite": "2.9.13",
     "vitest": "0.16.0",
     "web-vitals": "2.1.4"
-  }
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": ["react", "boilerplate", "vite", "bundle", "typescript"]
 }
