@@ -19,6 +19,7 @@
     "test:ui": "vitest --watch --ui",
     "lint": "eslint src",
     "lint:fix": "lint -- --fix",
+    "lint:css": "stylelint **/*.css --aei --color",
     "prettier": "prettier src --check",
     "prettier:fix": "prettier -- --write",
     "format": "prettier:fix && lint:fix",
@@ -29,6 +30,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": ["prettier:fix", "lint:fix"],
+    "*.css": ["prettier:fix", "lint:css"],
     "*.json": ["prettier --write"]
   },
   "dependencies": {
@@ -70,6 +72,9 @@
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
     "ts-node": "10.8.1",
     "typescript": "4.7.4",
     "vite": "2.9.13",
