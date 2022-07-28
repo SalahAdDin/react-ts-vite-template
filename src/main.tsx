@@ -1,11 +1,15 @@
-import App from '@presentation/screens/App';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
 import './index.css';
 
+import App from '@presentation/pages/App';
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+
+import reportWebVitals from './reportWebVitals';
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
 );
+
+reportWebVitals(console.log);
