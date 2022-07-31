@@ -18,3 +18,13 @@ It tries to follow the Clean Architecture(getting some of inspiration from [Alan
 - Presentation: Contains all screens and components intended to render our data.
 
 It is an intended architecture, it can be used either globally or per application's feature.
+
+## Git flow
+
+### Commit Convention
+
+> Note: Development based on  [Planable/commitlint-config](https://github.com/Planable/commitlint-config) and its [blog](https://strdr4605.com/commitlint-custom-commit-message-with-emojis).
+
+#### Emoji(Type) Descriptions
+
+Inspired by [parmentf/GitCommitEmoji](https://gist.github.com/parmentf/035de27d6ed1dce0b36a), we follow [this emoji schema](https://gitmoji.dev/).

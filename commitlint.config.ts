@@ -4,7 +4,6 @@ import {
   Plugin,
   QualifiedRules,
   Rule,
-  RuleConfigCondition,
   UserConfig,
 } from '@commitlint/types';
 
@@ -14,15 +13,91 @@ declare module '@commitlint/types' {
   }
 }
 
-// Regex based on https://regex101.com/r/L5f7hN/1
+const types = [
+  ':adhesive_bandage:',
+  ':alembic:',
+  ':alien:',
+  ':ambulance:',
+  ':animation:',
+  ':arrow_down:',
+  ':arrow_up:',
+  ':art:',
+  ':beers:',
+  ':bento:',
+  ':bookmark:',
+  ':boom:',
+  ':bug:',
+  ':building_construction:',
+  ':bulb:',
+  ':busts_in_silhouette:',
+  ':camera_flash:',
+  ':card_file_box:',
+  ':chart_with_upwards_trend:',
+  ':children_crossing:',
+  ':clown_face:',
+  ':construction_worker:',
+  ':construction:',
+  ':egg:',
+  ':fire:',
+  ':globe_with_meridians:',
+  ':goal_net:',
+  ':green_heart:',
+  ':hammer:',
+  ':coffin:',
+  ':heavy_minus_sign:',
+  ':heavy_plus_sign:',
+  ':iphone:',
+  ':label:',
+  'lipstick:',
+  ':lock:',
+  ':closed_lock_with_key:',
+  ':loud_sound:',
+  ':mag:',
+  ':memo:',
+  ':mute:',
+  ':ok_hand:',
+  ':package:',
+  ':page_facing_up:',
+  ':passport_control:',
+  ':pencil:',
+  ':pencil2:',
+  ':poop:',
+  ':pushpin:',
+  ':recycle:',
+  ':rewind:',
+  ':rocket:',
+  ':rotating_light:',
+  ':see_no_evil:',
+  ':seedling:',
+  ':sparkles:',
+  ':speech_balloon:',
+  ':stethoscope:',
+  ':tada:',
+  ':test_tube:',
+  ':triangular_flag_on_post:',
+  ':truck:',
+  ':twisted_rightwards_arrows:',
+  ':wastebasket:',
+  ':wheelchair:',
+  ':white_check_mark:',
+  ':wrench:',
+  ':zap:',
+  ':monocle_face:',
+  ':necktie:',
+  ':bricks:',
+  ':technologist:',
+  ':money_with_wings:',
+];
+
+// @deprecated Regex based on https://regex101.com/r/L5f7hN/1
+// Regex based on https://regex101.com/r/DFWyx5/1
 
 /**
  * If we want to make the ticket required, remove `?` after the last `)`.
  */
 const planableTicketWithSpaceAfter = /^(?:\[([A-z]*-\d+)\]\s)?/;
 
-const anyEmoji =
-  /([\u{1f300}-\u{1f5ff}\u{1f900}-\u{1f9ff}\u{1f600}-\u{1f64f}\u{1f680}-\u{1f6ff}\u{2600}-\u{26ff}\u{2700}-\u{27bf}\u{1f1e6}-\u{1f1ff}\u{1f191}-\u{1f251}\u{1f004}\u{1f0cf}\u{1f170}-\u{1f171}\u{1f17e}-\u{1f17f}\u{1f18e}\u{3030}\u{2b50}\u{2b55}\u{2934}-\u{2935}\u{2b05}-\u{2b07}\u{2b1b}-\u{2b1c}\u{3297}\u{3299}\u{303d}\u{00a9}\u{00ae}\u{2122}\u{23f3}\u{24c2}\u{23e9}-\u{23ef}\u{25b6}\u{23f8}-\u{23fa}](?:[\u{fe00}-\u{fe0f}])?)/u;
+const anyStringEmoji = /(:\w*:)/;
 
 const composedOptionalScope = /(?:\([^()\r\n]*\)|\()?(!)?/;
 
@@ -42,7 +117,7 @@ const headerMatchPlanablePattern: Rule = (parsed: Commit) => {
   if (type === null && subject === null) {
     return [
       false,
-      "header must be in format '[P-11] 🌈 Replace footer' or '🚧 Replace footer'",
+      "header must be in format '[P-11] :tada: Replace footer' or ':recycle: Replace footer'",
     ];
   }
   return [true];
@@ -65,23 +140,10 @@ const ticketPattern: Rule = (parsed: Commit) => {
   return [true];
 };
 
-const explainedTypeEnum: Rule<string[]> = (
-  parsed: Commit,
-  _when?: RuleConfigCondition,
-  expectedValue?: string[],
-) => {
-  const { type } = parsed;
-  if (type && expectedValue && !expectedValue.includes(type)) {
-    return [false, `type must be one of ${expectedValue.join(', ')}.`];
-  }
-  return [true];
-};
-
 const planablePlugin: Plugin = {
   rules: {
     'header-match-planable-pattern': headerMatchPlanablePattern,
     'ticket-match-pattern': ticketPattern,
-    'explained-type-enum': explainedTypeEnum,
   },
 };
 
@@ -89,7 +151,7 @@ const parserPreset: LintOptions = {
   parserOpts: {
     headerPattern: new RegExp(
       planableTicketWithSpaceAfter.source +
-        anyEmoji.source +
+        anyStringEmoji.source +
         composedOptionalScope.source +
         optionalSubject.source,
       'u',
@@ -111,36 +173,13 @@ const rules: QualifiedRules = {
 
   'header-match-planable-pattern': [2, 'always'],
   'ticket-match-pattern': [2, 'always'],
-  'explained-type-enum': [
-    2,
-    'always',
-    [
-      '🎉',
-      '🔖',
-      '✅',
-      '🚧',
-      '📓',
-      '🐞',
-      '🚨',
-      '👌',
-      '⚡️',
-      '⬆️',
-      '⬇️',
-      '✏️',
-      '♻️',
-      '⭐️',
-      '✨',
-      '🛠️',
-      '📦',
-      '🌈',
-      '🔀',
-    ],
-  ],
+  'type-enum': [2, 'always', types],
   'subject-case': [2, 'always', 'sentence-case'],
 };
 
 const Configuration: UserConfig = {
-  helpUrl: 'https://github.com/Planable/commitlint-config#emoji-descriptions=',
+  helpUrl:
+    'https://github.com/SalahAdDin/react-ts-vite-template#emojitype-descriptions',
   parserPreset,
   plugins: [planablePlugin],
   rules,
