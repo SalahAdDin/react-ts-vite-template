@@ -18,20 +18,20 @@
     "test:coverage": "vitest --watch --coverage --ui",
     "test:ui": "vitest --watch --ui",
     "lint": "eslint src",
-    "lint:fix": "lint -- --fix",
+    "lint:fix": "yarn lint --fix",
     "lint:css": "stylelint **/*.css --aei --color",
     "prettier": "prettier src --check",
-    "prettier:fix": "prettier -- --write",
-    "format": "prettier:fix && lint:fix",
+    "prettier:fix": "yarn prettier --write",
+    "format": "yarn prettier:fix &&  yarn lint:fix",
     "lint-staged": "lint-staged",
     "type-check": "tsc",
     "prepare": "husky install",
     "commit": "commit"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["prettier:fix", "lint:fix"],
-    "*.css": ["prettier:fix", "lint:css"],
-    "*.json": ["prettier --write"]
+    "*.{js,jsx,ts,tsx}": ["prettier --check --write", "eslint --fix"],
+    "*.css": ["prettier --check --write", "stylelint --aei --color"],
+    "*.json": ["prettier --check --write"]
   },
   "dependencies": {
     "nanoid": "4.0.0",
