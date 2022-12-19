@@ -17,6 +17,7 @@
     "airbnb/hooks",
     "airbnb-typescript",
     "plugin:react/jsx-runtime",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
