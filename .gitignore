@@ -7,19 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-coverage
 node_modules
 dist
 dist-ssr
 *.local
+
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.env.*
-*.env
 *.suo
 *.ntvs*
 *.njsproj
