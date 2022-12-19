@@ -1,5 +1,10 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -9,35 +14,11 @@
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "airbnb",
+    "airbnb/hooks",
     "airbnb-typescript",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
   ],
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {
-    "function-paren-newline": "warn",
-    "implicit-arrow-linebreak": "warn",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "object-curly-newline": [
-      "error",
-      {
-        "ExportDeclaration": { "multiline": true, "minProperties": 4 }
-      }
-    ],
-    "operator-linebreak": "warn",
-    "react/jsx-curly-newline": "warn",
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
-    ],
-    "react/jsx-one-expression-per-line": [1, { "allow": "single-child" }],
-    "react/jsx-props-no-spreading": "off",
-    "react/jsx-wrap-multilines": "warn",
-    "react/require-default-props": "off",
-    "@typescript-eslint/indent": [1]
-  },
+  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -47,16 +28,29 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
+  "plugins": ["react", "@typescript-eslint", "vitest"],
+  "rules": {
+    "indent": ["error", 4],
+    "import/no-unresolved": "error",
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "vitest/max-nested-describe": [
+      "error",
+      {
+        "max": 3
+      }
+    ]
+  },
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
     }
-  },
-  "env": {
-    "browser": true,
-    "es2021": true
   }
 }
