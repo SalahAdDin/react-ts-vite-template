@@ -25,6 +25,16 @@ It is an intended architecture, it can be used either globally or per applicatio
 
 > Note: Development based on  [Planable/commitlint-config](https://github.com/Planable/commitlint-config) and its [blog](https://strdr4605.com/commitlint-custom-commit-message-with-emojis).
 
-#### Emoji(Type) Descriptions
+The commint convention tries to add a ticker number before the commit `type`, always optional, extentending the [conventional commit base proposition](https://www.conventionalcommits.org/en/v1.0.0/).
 
-Inspired by [parmentf/GitCommitEmoji](https://gist.github.com/parmentf/035de27d6ed1dce0b36a), we follow [this emoji schema](https://gitmoji.dev/).
+Hence, the intended pattern[ is as follows](https://regex101.com/r/YyeQ0X/1):
+
+```
+[PAP-2013] feat(lang): :arrow_up: add Polish language.
+```
+
+Where the ticket number is embedded in square brackets and is optional. We accept [gitmojies](https://gitmoji.dev/) now on the `subject` and not  as a type, making it more clear.
+
+~~#### Emoji(Type) Description~~
+
+~~Inspired by [parmentf/GitCommitEmoji](https://gist.github.com/parmentf/035de27d6ed1dce0b36a), we follow [this emoji schema](https://gitmoji.dev/).~~

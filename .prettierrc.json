@@ -2,7 +2,6 @@
   "parser": "typescript",
   "printWidth": 80,
   "arrowParens": "always",
-  "singleQuote": true,
   "semi": true,
   "tabWidth": 2,
   "endOfLine": "auto",
@@ -15,8 +14,16 @@
   "importOrder": [
     "^(^react$|@react|react)",
     "<THIRD_PARTY_MODULES>",
-    "^@/(.*)$",
+    "^@(.*)$",
     "^[./]"
+  ],
+  "importOrderParserPlugins": ["importAssertions", "typescript", "jsx"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "pluginSearchDirs": false,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
   ],
   "overrides": [
     {
