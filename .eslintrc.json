@@ -31,8 +31,10 @@
   },
   "plugins": ["react", "@typescript-eslint", "vitest"],
   "rules": {
-    "indent": ["error", 4],
+    "@typescript-eslint/quotes": ["error", "double"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/no-unresolved": "error",
+    "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],

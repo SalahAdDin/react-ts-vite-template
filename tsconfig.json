@@ -26,6 +26,6 @@
       "@presentation/*": ["presentation/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "commitlint.config.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
