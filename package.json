@@ -2,14 +2,13 @@
   "name": "react-ts-vite-template",
   "description": "Boilerplate for React/Typescript, built on top of Vite ⚡️",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "src/main.tsx",
   "author": "Luis Alaguna <alagunasalahaddin@live.com>",
   "homepage": "https://github.com/SalahAdDin/react-ts-vite-template#readme",
   "repository": "github:SalahAdDin/react-ts-vite-template.git",
   "bugs": "https://github.com/SalahAdDin/react-ts-vite-template/issues",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -27,7 +26,8 @@
     "lint-staged": "lint-staged",
     "type-check": "tsc",
     "prepare": "husky install",
-    "commit": "commitlint"
+    "commit": "commitlint",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@hookform/resolvers": "2.9.10",
@@ -60,6 +60,7 @@
     "@vitest/coverage-c8": "0.25.8",
     "@vitest/ui": "0.25.8",
     "autoprefixer": "10.4.13",
+    "conventional-changelog-cli": "2.2.2",
     "eslint": "8.30.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.0.0",

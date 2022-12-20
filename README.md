@@ -30,7 +30,7 @@ The commint convention tries to add a ticker number before the commit `type`, al
 Hence, the intended pattern[ is as follows](https://regex101.com/r/YyeQ0X/1):
 
 ```
-[PAP-2013] feat(lang): :arrow_up: add Polish language
+[PAP-2013] feat(lang): :arrow_up: add Polish language.
 ```
 
 Where the ticket number is embedded in square brackets and is optional. We accept [gitmojies](https://gitmoji.dev/) now on the `subject` and not  as a type, making it more clear.
