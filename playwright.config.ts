@@ -1,5 +1,11 @@
+import "dotenv/config";
+
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
+
+const host = process.env.VITE_SERVER_HOST || "localhost";
+const port = process.env.VITE_SERVER_PORT || 3000;
+const baseURL = process.env.VITE_APP_BASE_URL || "/";
 
 /**
  * Read environment variables from file.
@@ -36,7 +42,7 @@ const config: PlaywrightTestConfig = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: `http://${host}:${port}${baseURL}`,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -98,12 +104,12 @@ const config: PlaywrightTestConfig = {
   // outputDir: 'test-results/',
 
   /* Run your local dev server before starting the tests */
-  /* 
+  /*
   webServer: {
     command: "pnpm vite serve --config vite.vrt.config.ts",
     port: 3000,
     reuseExistingServer: true,
-  }, 
+  },
   */
 };
 

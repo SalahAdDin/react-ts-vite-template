@@ -26,6 +26,13 @@
       "@presentation/*": ["presentation/*"]
     }
   },
-  "include": ["src", "commitlint.config.ts", "vite.config.ts"],
+  "include": [
+    "mocks",
+    "src",
+    "tests",
+    "commitlint.config.cts",
+    "playwright.config.ts",
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

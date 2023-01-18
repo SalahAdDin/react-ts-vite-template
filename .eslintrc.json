@@ -10,16 +10,15 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:testing-library/react",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
+    "plugin:jest-dom/recommended",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
     "plugin:react/jsx-runtime",
-    "plugin:@tanstack/eslint-plugin-query/recommended"
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:prettier/recommended"
   ],
-  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -45,6 +44,17 @@
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["src/**/*.test.[tj]s?(x)"],
+      "excludedFiles": ["src/**/*.e2e.test.[tj]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    },
+    {
+      "files": ["tests/**/*.test.[tj]s?(x)"],
+      "extends": ["plugin:playwright/playwright-test"]
+    }
+  ],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]

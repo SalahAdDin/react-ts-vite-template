@@ -1,4 +1,4 @@
-# Logs
+# Log files
 logs
 *.log
 npm-debug.log*
@@ -7,20 +7,28 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Folders
 node_modules
+coverage
 dist
 dist-ssr
 *.local
 
-/test-results/
-/playwright-report/
-/playwright/.cache/
+test-results/
+playwright-report/
+playwright/.cache/
+
+test-results.xml
+
+# local env files
+.env.local
+.env.*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .obsidian
+.vscode
+!.vscode/extensions.json
 .DS_Store
 *.suo
 *.ntvs*
