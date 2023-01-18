@@ -2,7 +2,7 @@
   "name": "react-ts-vite-template",
   "description": "Boilerplate for React/Typescript, built on top of Vite ⚡️",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "src/main.tsx",
   "author": "Luis Alaguna <alagunasalahaddin@live.com>",
