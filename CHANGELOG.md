@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.0.0...v1.0.1) (2023-01-19)
+
+
+### Bug Fixes
+
+* :bug: Fixing multiple bugs related to testing. ([c50cca7](https://github.com/SalahAdDin/react-ts-vite-template/commit/c50cca7c65ce20e5081a72170e8707025986df59))
+
+
+
 # [1.0.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v0.3.0...v1.0.0) (2023-01-19)
 
 
