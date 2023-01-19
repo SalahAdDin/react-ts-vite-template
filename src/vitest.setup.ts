@@ -1,6 +1,6 @@
 import { afterAll, afterEach, beforeAll } from "vitest";
 
-import "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import server from "../mocks/server";
 

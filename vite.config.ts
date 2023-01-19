@@ -30,11 +30,11 @@ export default (configEnv: ConfigEnv) => {
     test: {
       globals: true,
       watch: false,
+      include: ["src/**/*.{test}.{cjs,ts,mts,cts,tsx}"],
       coverage: {
         reporter: ["text", "html"],
         branches: 80,
         functions: 80,
-        // include: ["/src"],
         lines: 80,
         statements: -10,
       },

@@ -18,7 +18,7 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --watch --coverage --ui",
     "test:ui": "vitest --watch --ui",
-    "test:e2e": "playwright test --trace on",
+    "test:e2e": "playwright test --trace on --pass-with-no-tests",
     "test:e2e:install": "playwright install",
     "test:e2e:help": "playwright --help",
     "test:e2e:report": "playwright show-report",
