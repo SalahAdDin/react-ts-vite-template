@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // import { RouterProvider } from "@tanstack/react-router";
 import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 const queryClient = new QueryClient();
 
@@ -59,3 +60,5 @@ prepare().then(
   },
   () => {}
 );
+
+reportWebVitals();
