@@ -5,7 +5,7 @@
   "semi": true,
   "tabWidth": 2,
   "endOfLine": "auto",
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "useTabs": false,
   "quoteProps": "as-needed",
   "jsxSingleQuote": false,
@@ -29,11 +29,11 @@
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
       "options": {
-        "parser": "javascript"
+        "parser": "meriyah"
       }
     },
     {
-      "files": "*.ts",
+      "files": ["*.ts", "*.cts"],
       "options": {
         "parser": "typescript"
       }
