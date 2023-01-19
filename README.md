@@ -4,7 +4,8 @@ This is a template based on experiences from assessments and personal projects.
 
 It is build on:
 - [**Typescript**](https://www.typescriptlang.org/), of course, who does not like Typescript?
-- [**Vite**](https://vitejs.dev/): is faster than **Webpack** at development and building time, it comes out of the box prepared for working with many different frameworks but still keeps simplicity and customizability.
+- [**Vite**](https://vitejs.dev/): it's faster than **Webpack** at development and building time, it comes out of the box prepared for working with many different frameworks but still keeps simplicity and customizability.
+- [**MSW**](https://mswjs.io/): it intercepts requests on the network level, guarantying an identical application's behavior with and without mocks, without requiring any change in the application's code for the sake of mocking.
 - [**Axios**](https://github.com/axios/axios) as fetching API tool.
 - [**TanStack-Query**](https://tanstack.com/query/v4/docs/react/overview): gives us caching of server data out of the box with cache invalidation and request de-duping.
 - [**ESLint**](https://eslint.org/) and [**Prettier**](https://prettier.io/) for linting and beautifying code.
@@ -15,11 +16,18 @@ It is build on:
 - [**Conventional Changelog**](https://github.com/conventional-changelog/conventional-changelog): It writes the changelos of changes in each version from the messages of the repository's commitments.
 - [**React Headless Pagination**](https://github.com/fullhdpixel/react-headless-pagination): the pagination is the most complex component to handle in the project, to avoid wasting much time on it, we opted for using a headless ready component to it, so we can customize its design by using **CSS**.
 
+## Folder Structure
+Following the architecturing approach, we decided to structure this project as follows:
+- **Mocks:** It contains all sources relates to **MSW**, i. e., the mocking service.
+- **Src**: It is the application sources' folder itself.
+- **Tests**: It includes **E2E**, **integration** and other non unit tests.
+
+### Application's Architecture
 It tries to follow the Clean Architecture(getting some of inspiration from [Alan Buscaglia](https://www.linkedin.com/in/alanbuscaglia/)'s Clean Architecture series on [Gentleman Programming](https://www.youtube.com/c/GentlemanProgramming): [Clean Architecture](https://www.youtube.com/watch?v=vRGVnqylO68), [React Part 1](https://www.youtube.com/watch?v=5LqhlCd2_nE), [React Part 2](https://www.youtube.com/watch?v=XEcZaKK38fg)):
-- Application: Contains all related business logic.
-- Domain: Contains all models(a.k.a types/dto for Typescript).
-- Interface: Contains all services required to interact with foreign services.
-- Presentation: Contains all screens and components intended to render our data.
+- **Application:** Contains all related business logic.
+- **Domain:** Contains all models(a.k.a types/dto for Typescript).
+- **Interface:** Contains all services required to interact with foreign services.
+- **Presentation:** Contains all screens and components intended to render our data.
 
 It is an intended architecture, it can be used either globally or per application's feature.
 
