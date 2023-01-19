@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Layout: React.FC = () => <div>Layout</div>;
 

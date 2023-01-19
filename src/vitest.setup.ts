@@ -1,5 +1,6 @@
+import { afterAll, afterEach, beforeAll } from "vitest";
+
 import "@testing-library/react";
-import { beforeAll, afterEach, afterAll } from "vitest";
 
 import server from "../mocks/server";
 

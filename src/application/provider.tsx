@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
-import AppContext from './context';
+import React, { useMemo } from "react";
+
+import AppContext from "./context";
 
 const AppProvider: React.FC<{ children?: React.ReactNode }> = ({
-  children,
+  children = "",
 }) => {
   // const [state, setState] = useState();
   const memo = useMemo(() => ({}), []);
