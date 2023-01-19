@@ -29,7 +29,7 @@
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
       "options": {
-        "parser": "javascript"
+        "parser": "meriyah"
       }
     },
     {
