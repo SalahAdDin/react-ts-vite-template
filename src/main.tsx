@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "@presentation/App";
-import router from "@presentation/router";
+// import router from "@presentation/router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // import { RouterProvider } from "@tanstack/react-router";
@@ -16,7 +16,7 @@ const ReactQueryDevtools =
     : React.lazy(() =>
         import("@tanstack/react-query-devtools").then((res) => ({
           default: res.ReactQueryDevtools,
-        })),
+        }))
       );
 
 /* const ReactRouterDevtools =
@@ -38,12 +38,13 @@ async function prepare() {
   return Promise.resolve();
 }
 
-prepare().then(() => {
-  ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <App />
-        {/*
+prepare().then(
+  () => {
+    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+      <React.StrictMode>
+        <QueryClientProvider client={queryClient}>
+          <App />
+          {/*
         <RouterProvider router={router} />
          <ReactRouterDevtools
           initialIsOpen={false}
@@ -51,8 +52,10 @@ prepare().then(() => {
           position="bottom-right"
         />
         */}
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </React.StrictMode>,
-  );
-});
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </React.StrictMode>
+    );
+  },
+  () => {}
+);
