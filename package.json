@@ -14,11 +14,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "pw:help": "playwright --help",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --watch --coverage --ui",
     "test:ui": "vitest --watch --ui",
+    "test:e2e": "playwright test --trace on",
+    "test:e2e:install": "playwright install",
+    "test:e2e:help": "playwright --help",
+    "test:e2e:report": "playwright show-report",
     "lint": "eslint src",
     "lint:fix": "pnpm lint --fix",
     "prettier": "prettier src --check",
@@ -28,7 +31,7 @@
     "type-check": "tsc",
     "prepare": "husky install",
     "commit": "commitlint",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "@hookform/resolvers": "2.9.10",
