@@ -1,3 +1,48 @@
+# [1.0.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v0.3.0...v1.0.0) (2023-01-19)
+
+
+### Bug Fixes
+
+* :bug: Fixing code style on main file. ([a58f806](https://github.com/SalahAdDin/react-ts-vite-template/commit/a58f806da32d9e2cbe29ca8eb1e52188b8e20a9b))
+* :building_construction: Adding missing report vitals instance to main. ([486ca38](https://github.com/SalahAdDin/react-ts-vite-template/commit/486ca3876f8a670b784b39bb49c73d283f2ad301))
+* :wrench: Adding missing .env file and type definition. ([40aae59](https://github.com/SalahAdDin/react-ts-vite-template/commit/40aae59b997bc3c9d1e0c9912098abc98302ca7b))
+* :wrench: Settling the correct prettier javascript parser. ([b48fec8](https://github.com/SalahAdDin/react-ts-vite-template/commit/b48fec82146e25caf939d6921aecda45fec11afd))
+
+
+### Features
+
+* :bug: Fixing eslint and prettier conflicts. ([7e7e436](https://github.com/SalahAdDin/react-ts-vite-template/commit/7e7e436e6af0c8908eff08b3c87fdd38e0260d67))
+* :hammer: Updating scripts for testing. ([9b21158](https://github.com/SalahAdDin/react-ts-vite-template/commit/9b211581b882608db4eff0c619c2177419653051))
+* :lipstick: Adding utils basic components. ([4e48806](https://github.com/SalahAdDin/react-ts-vite-template/commit/4e48806ee81b909fa24acc629d66188e5fb522bf))
+* :postbox: Adding endpoint and service examples. ([320db49](https://github.com/SalahAdDin/react-ts-vite-template/commit/320db49cd99af75f09108f89da13e764e1072214))
+
+
+
+# [0.3.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v0.2.2...v0.3.0) (2023-01-18)
+
+
+### Features
+
+* :construction_worker: Adding mock service based on fakerjs. ([0edfd4d](https://github.com/SalahAdDin/react-ts-vite-template/commit/0edfd4ddd34fd8043a094407e530a6dba2289f74))
+* :test_tube: Adding initial e2e test to assigned folder. ([7cd4b85](https://github.com/SalahAdDin/react-ts-vite-template/commit/7cd4b85e59d9cf4e6d212ced7a0132aeb800439b))
+* :wrench: Eslint now apply different lints based on tests types. ([2f139a1](https://github.com/SalahAdDin/react-ts-vite-template/commit/2f139a16e2ed48156c885d5d1a02b5da4a0a9f61))
+* :wrench: Loading url related values from env file. ([f35d416](https://github.com/SalahAdDin/react-ts-vite-template/commit/f35d4162da77807d2461420f04dfc2eac4a105af))
+
+
+
+## [0.2.2](https://github.com/SalahAdDin/react-ts-vite-template/compare/v0.2.1...v0.2.2) (2023-01-18)
+
+
+### Bug Fixes
+
+* :bug: Updating commintlint package to enable cts files. ([0f51301](https://github.com/SalahAdDin/react-ts-vite-template/commit/0f513016b14564a611faa2a6de50448e592e9438))
+
+
+
+## [0.2.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v0.2.0...v0.2.1) (2022-12-20)
+
+
+
 # [0.2.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/b07a832e0574e64358ec3bd8c610bcdb18cece5a...v0.2.0) (2022-12-20)
 
 
