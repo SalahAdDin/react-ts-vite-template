@@ -1,9 +1,10 @@
 /*
-import { createReactRouter, createRouteConfig } from "@tanstack/react-router";
+import { createReactRouter, createRouteConfig, lazy } from "@tanstack/react-router";
 
 import App from "./App";
-import UpdateUser from "./views/UpdateUser";
-import UserTable from "./views/UserTable";
+
+const UpdateUser = lazy(() => import("./views/UpdateUser"));
+const UserTable = lazy(() => import("./views/UserTable"));
 
 const rootRoute = createRouteConfig({
   component: App,
