@@ -30,12 +30,30 @@
   },
   "plugins": ["react", "@typescript-eslint", "vitest"],
   "rules": {
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/indent": "off",
     "@typescript-eslint/quotes": ["error", "double"],
+    "comma-dangle": "off",
+    "function-paren-newline": "warn",
+    "implicit-arrow-linebreak": "warn",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/no-unresolved": "error",
-    "indent": ["error", 2],
+    "indent": "off",
     "linebreak-style": ["error", "unix"],
+    "object-curly-newline": [
+      "error",
+      {
+        "ExportDeclaration": { "multiline": true, "minProperties": 5 }
+      }
+    ],
+    "operator-linebreak": "warn",
     "quotes": ["error", "double"],
+    "react/require-default-props": [
+      "error",
+      {
+        "functions": "defaultArguments"
+      }
+    ],
     "semi": ["error", "always"],
     "vitest/max-nested-describe": [
       "error",
