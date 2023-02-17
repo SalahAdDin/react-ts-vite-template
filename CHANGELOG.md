@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.1.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.0...v1.1.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* :green_heart: Adding npm support to update package version. ([94afa37](https://github.com/SalahAdDin/react-ts-vite-template/commit/94afa37693be6804755bdf61a93582853642726c))
+* :pushpin: Pined npm to specific versions. ([43a58c0](https://github.com/SalahAdDin/react-ts-vite-template/commit/43a58c069f977db971afcf9dc6a495f2a38b769d))
+
 # [1.1.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.0.1...v1.1.0) (2023-02-17)
 
 
