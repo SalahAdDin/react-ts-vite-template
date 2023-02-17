@@ -18,6 +18,5 @@
       }
     ],
     "@semantic-release/github"
-  ],
-  "repository": "github:SalahAdDin/react-ts-vite-template.git"
+  ]
 }

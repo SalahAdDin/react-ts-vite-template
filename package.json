@@ -7,7 +7,7 @@
   "main": "src/main.tsx",
   "author": "Luis Alaguna <alagunasalahaddin@live.com>",
   "homepage": "https://github.com/SalahAdDin/react-ts-vite-template#readme",
-  "repository": "github:SalahAdDin/react-ts-vite-template.git",
+  "repository": "git@github.com:SalahAdDin/react-ts-vite-template.git",
   "bugs": "https://github.com/SalahAdDin/react-ts-vite-template/issues",
   "type": "module",
   "scripts": {
