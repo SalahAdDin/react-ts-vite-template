@@ -19,6 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
+    "types": ["vitest/globals"],
     "paths": {
       "@application/*": ["application/*"],
       "@domain/*": ["domain/*"],

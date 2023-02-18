@@ -1,6 +1,5 @@
 import { afterAll, afterEach, beforeAll } from "vitest";
-
-import "@testing-library/jest-dom";
+import "vitest-dom/extend-expect";
 
 import server from "../mocks/server";
 
