@@ -12,6 +12,7 @@
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:jest-dom/recommended",
+    "plugin:vitest/all",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
