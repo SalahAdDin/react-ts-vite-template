@@ -107,7 +107,10 @@ Run all `vitests` in [UI mode](https://vitest.dev/guide/ui.html).
 #### `pnpm test:coverage`
 Run all `vitests` in [UI mode](https://vitest.dev/guide/ui.html) with **coverage**.
 
-#### `pnpm test:e2e:install`
+### `pnpm test:preview`
+
+Run [vitest-preview](https://www.vitest-preview.com/guide/getting-started) for visual testing experience.
+
 Install all dependencies required by Playwright before to run the **e  
 e** tests.
 
