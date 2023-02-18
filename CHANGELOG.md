@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.1...v1.2.0) (2023-02-18)
+
+
+### Features
+
+* :heavy_plus_sign: Adding vitest preview for DI/DX. ([8cdfeac](https://github.com/SalahAdDin/react-ts-vite-template/commit/8cdfeac6eb43920ea4d43672103595663cbdd7f8))
+
 ## [1.1.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.0...v1.1.1) (2023-02-17)
 
 
