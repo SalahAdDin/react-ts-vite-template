@@ -5,12 +5,10 @@
   "semi": true,
   "tabWidth": 2,
   "endOfLine": "auto",
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "useTabs": false,
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "bracketSpacing": true,
-  "bracketSameLine": false,
+  "quoteProps": "consistent",
+  "bracketSameLine": true,
   "importOrder": [
     "^(^react$|@react|react)",
     "<THIRD_PARTY_MODULES>",
@@ -39,7 +37,7 @@
       }
     },
     {
-      "files": ["*.json", "*.jsonc", ".babelrc", ".prettierrc"],
+      "files": ["*.json", "*.jsonc", ".*rc"],
       "options": {
         "parser": "json"
       }
