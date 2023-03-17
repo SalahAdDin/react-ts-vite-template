@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.0...v1.2.1) (2023-03-17)
+
+
+### Bug Fixes
+
+* :wrench: Fixing trailing/dangling comma conflict between prettier and eslint. ([aa8fbd2](https://github.com/SalahAdDin/react-ts-vite-template/commit/aa8fbd2029e59d3c3c703e5a8f5a4c09dfad8ab3))
+
 # [1.2.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.1...v1.2.0) (2023-02-18)
 
 
