@@ -5,7 +5,7 @@
   "semi": true,
   "tabWidth": 2,
   "endOfLine": "auto",
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "useTabs": false,
   "quoteProps": "consistent",
   "bracketSameLine": true,
