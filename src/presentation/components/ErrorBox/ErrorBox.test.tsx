@@ -4,7 +4,7 @@ import ErrorBox from "./ErrorBox";
 
 const DUMMY_ERROR = "Connection Error with 400 code.";
 
-describe("Error", () => {
+describe("error", () => {
   it("should render the error widget with the given message", () => {
     const view = render(<ErrorBox message={DUMMY_ERROR} />);
     expect(view).toBeTruthy();
