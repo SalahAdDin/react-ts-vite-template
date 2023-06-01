@@ -33,6 +33,7 @@ export default (configEnv: ConfigEnv) => {
       watch: false,
       include: ["src/**/*.{test}.{cjs,ts,mts,cts,tsx}"],
       coverage: {
+        provider: "c8",
         reporter: ["text", "html"],
         branches: 80,
         functions: 80,
