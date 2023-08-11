@@ -1,13 +1,7 @@
 // import { BrowserRouter } from "react-router-dom";
-import { afterEach } from "vitest";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { cleanup, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-afterEach(() => {
-  cleanup();
-});
 
 const customRender = (ui: React.ReactElement, options = {}) =>
   render(ui, {

@@ -12,6 +12,7 @@
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:jest-dom/recommended",
+    "plugin:vitest/all",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
@@ -30,7 +31,16 @@
   },
   "plugins": ["react", "@typescript-eslint", "vitest"],
   "rules": {
-    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }
+    ],
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/quotes": ["error", "double"],
     "comma-dangle": "off",

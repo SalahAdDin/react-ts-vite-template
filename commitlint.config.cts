@@ -39,6 +39,8 @@ const rules: QualifiedRules = {
   "subject-full-stop": [2, "always", "."],
   "scope-case": [2, "always", "lower-case"],
   "type-enum": [2, "always", types],
+  "body-max-line-length": [2, "always", 250],
+  "header-max-length": [2, "always", 150],
 };
 
 const Configuration: UserConfig = {

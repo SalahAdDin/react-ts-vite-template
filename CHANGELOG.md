@@ -1,3 +1,43 @@
+# Semantic Versioning Changelog
+
+## [1.2.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.0...v1.2.1) (2023-03-17)
+
+
+### Bug Fixes
+
+* :wrench: Fixing trailing/dangling comma conflict between prettier and eslint. ([aa8fbd2](https://github.com/SalahAdDin/react-ts-vite-template/commit/aa8fbd2029e59d3c3c703e5a8f5a4c09dfad8ab3))
+
+# [1.2.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.1...v1.2.0) (2023-02-18)
+
+
+### Features
+
+* :heavy_plus_sign: Adding vitest preview for DI/DX. ([8cdfeac](https://github.com/SalahAdDin/react-ts-vite-template/commit/8cdfeac6eb43920ea4d43672103595663cbdd7f8))
+
+## [1.1.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.1.0...v1.1.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* :green_heart: Adding npm support to update package version. ([94afa37](https://github.com/SalahAdDin/react-ts-vite-template/commit/94afa37693be6804755bdf61a93582853642726c))
+* :pushpin: Pined npm to specific versions. ([43a58c0](https://github.com/SalahAdDin/react-ts-vite-template/commit/43a58c069f977db971afcf9dc6a495f2a38b769d))
+
+# [1.1.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.0.1...v1.1.0) (2023-02-17)
+
+
+### Bug Fixes
+
+* :green_heart: repository url. ([339bce4](https://github.com/SalahAdDin/react-ts-vite-template/commit/339bce456c3bf852bd40f2b0f8eae3e1f73848ff))
+* :rotating_light: Fixing commit lint conflicts with semantic-release. ([81b1204](https://github.com/SalahAdDin/react-ts-vite-template/commit/81b120469b520a746574f624dacc2208fc1e9d1b))
+* 💚 action branches. ([0614168](https://github.com/SalahAdDin/react-ts-vite-template/commit/06141682e4cc108b206e9021893587f44c7a40df))
+* 💚 Action workflow. ([9e66a5e](https://github.com/SalahAdDin/react-ts-vite-template/commit/9e66a5e5e8f35a96b10b354bd3506a52631f7d05))
+* 💚 Fixing commit message conflict with linter. ([d3befe1](https://github.com/SalahAdDin/react-ts-vite-template/commit/d3befe100ffa43927ce7fd7adfec68aba7acf6cb))
+
+
+### Features
+
+* :heavy_plus_sign: Semantic Release automation. ([db716f1](https://github.com/SalahAdDin/react-ts-vite-template/commit/db716f1e79908572b5795caceb53f29c87164d31))
+
 ## [1.0.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.0.0...v1.0.1) (2023-01-19)
 
 
@@ -69,6 +109,3 @@
 ### Features
 
 * :fire: removing unrequired style lint. ([8f2494e](https://github.com/SalahAdDin/react-ts-vite-template/commit/8f2494ea5e0964ce7f1fcf1d0bbe2421426198a2))
-
-
-
