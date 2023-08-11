@@ -9,20 +9,25 @@
   "useTabs": false,
   "quoteProps": "consistent",
   "bracketSameLine": true,
+  "pluginSearchDirs": false,
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
   "importOrder": [
+    "<BUILTIN_MODULES>",
+    "",
     "^(^react$|@react|react)",
+    "",
     "<THIRD_PARTY_MODULES>",
+    "",
     "^@(.*)$",
+    "",
     "^[./]"
   ],
   "importOrderParserPlugins": ["importAssertions", "typescript", "jsx"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "pluginSearchDirs": false,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs"],
