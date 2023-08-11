@@ -1,4 +1,6 @@
 import path from "path";
+
+import million from "million/compiler";
 import { loadEnv } from "vite";
 import type { ConfigEnv } from "vite";
 import { defineConfig } from "vitest/config";
@@ -14,7 +16,7 @@ export default (configEnv: ConfigEnv) => {
 
   return defineConfig({
     base: process.env.VITE_APP_BASE_URL,
-    plugins: [react()],
+    plugins: [million.vite({ auto: true }), react()],
     css: {
       devSourcemap: true,
     },
