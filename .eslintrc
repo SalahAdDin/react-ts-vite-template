@@ -68,19 +68,13 @@
         "functions": "defaultArguments"
       }
     ],
-    "semi": ["error", "always"],
-    "vitest/max-nested-describe": [
-      "error",
-      {
-        "max": 3
-      }
-    ]
+    "semi": ["error", "always"]
   },
   "overrides": [
     {
       "files": ["src/**/*.test.[tj]s?(x)"],
       "excludedFiles": ["src/**/*.e2e.test.[tj]s?(x)"],
-      "extends": ["plugin:testing-library/react"]
+      "extends": ["plugin:testing-library/react", "plugin:vitest/all"]
     },
     {
       "files": ["tests/**/*.test.[tj]s?(x)"],
