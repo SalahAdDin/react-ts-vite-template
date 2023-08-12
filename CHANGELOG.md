@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.2](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.1...v1.2.2) (2023-08-12)
+
+
+### Bug Fixes
+
+* :construction_worker: Fixing action command on pnpm. ([731a683](https://github.com/SalahAdDin/react-ts-vite-template/commit/731a68367072285bb189f06c274d860d765c36c5))
+
 ## [1.2.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.0...v1.2.1) (2023-03-17)
 
 
