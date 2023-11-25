@@ -1,5 +1,5 @@
 /*
-import { createReactRouter, createRouteConfig, lazy } from "@tanstack/router";
+import { createReactRouter, createRouteConfig, lazy } from "@tanstack/react-router";
 
 import App from "./App";
 

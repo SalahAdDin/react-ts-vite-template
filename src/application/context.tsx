@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-type AppContextProps = {};
+type AppContextProps = object;
 
 const AppContext = createContext<AppContextProps>({});
 
