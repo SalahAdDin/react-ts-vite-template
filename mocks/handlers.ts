@@ -1,10 +1,10 @@
-import { rest } from "msw";
+import { http } from "msw";
 
 // import users from "./entities/users.json" assert { type: "json" };
 // import shuffleArray from "./utils";
 
 const handlers = [
-  rest.get("/users", () => {}),
+  http.get("/users", () => {}),
 
   /*
   rest.get("/user/:id", (req, res, ctx) => {}),
