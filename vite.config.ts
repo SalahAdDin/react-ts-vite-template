@@ -23,6 +23,7 @@ export default (configEnv: ConfigEnv) => {
     build: { sourcemap: true },
     resolve: {
       alias: {
+        "@": path.resolve(__dirname, "src"),
         "@application": path.resolve(__dirname, "src/application"),
         "@domain": path.resolve(__dirname, "src/domain"),
         "@infrastructure": path.resolve(__dirname, "src/infrastructure"),
@@ -33,7 +34,7 @@ export default (configEnv: ConfigEnv) => {
       globals: true,
       css: true,
       watch: false,
-      include: ["src/**/*.{test}.{cjs,ts,mts,cts,tsx}"],
+      include: ["src/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
       coverage: {
         provider: "v8",
         reporter: ["text", "html"],

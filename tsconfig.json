@@ -24,6 +24,7 @@
     "baseUrl": "src",
     "types": ["vitest/globals"],
     "paths": {
+      "@/*": ["src/*"],
       "@application/*": ["application/*"],
       "@domain/*": ["domain/*"],
       "@infrastructure/*": ["infrastructure/*"],

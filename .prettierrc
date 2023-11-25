@@ -9,7 +9,6 @@
   "useTabs": false,
   "quoteProps": "consistent",
   "bracketSameLine": true,
-  "pluginSearchDirs": false,
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
@@ -26,8 +25,6 @@
     "^[./]"
   ],
   "importOrderParserPlugins": ["importAssertions", "typescript", "jsx"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs"],

@@ -11,14 +11,12 @@
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
-    "plugin:jest-dom/recommended",
-    "plugin:vitest/all",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
     "plugin:react/jsx-runtime",
     "plugin:@tanstack/eslint-plugin-query/recommended",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -74,7 +72,11 @@
     {
       "files": ["src/**/*.test.[tj]s?(x)"],
       "excludedFiles": ["src/**/*.e2e.test.[tj]s?(x)"],
-      "extends": ["plugin:testing-library/react", "plugin:vitest/all"]
+      "extends": [
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react",
+        "plugin:vitest/all"
+      ]
     },
     {
       "files": ["tests/**/*.test.[tj]s?(x)"],
