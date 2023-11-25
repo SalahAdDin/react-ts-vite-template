@@ -19,20 +19,20 @@ It is build on:
 
 ## Folder Structure
 
-Following the architecturing approach, we decided to structure this project as follows:
+Following the architectural approach, we decided to structure this project as follows:
 
-- **Mocks:** It contains all sources relates to **MSW**, i. e., the mocking service.
-- **Src**: It is the application sources' folder itself.
-- **Tests**: It includes **E2E**, **integration** and other non unit tests.
+- **mocks:** It contains all sources relates to **MSW**, i. e., the mocking service.
+- **src**: It is the application sources' folder itself.
+- **tests**: It includes **E2E**, **integration** and other non unit tests.
 
 ### Application's Architecture
 
 It tries to follow the Clean Architecture(getting some of inspiration from [Alan Buscaglia](https://www.linkedin.com/in/alanbuscaglia/)'s Clean Architecture series on [Gentleman Programming](https://www.youtube.com/c/GentlemanProgramming): [Clean Architecture](https://www.youtube.com/watch?v=vRGVnqylO68), [React Part 1](https://www.youtube.com/watch?v=5LqhlCd2_nE), [React Part 2](https://www.youtube.com/watch?v=XEcZaKK38fg)):
 
-- **Application:** Contains all related business logic.
-- **Domain:** Contains all models(a.k.a types/dto for Typescript).
-- **Interface:** Contains all services required to interact with foreign services.
-- **Presentation:** Contains all screens and components intended to render our data.
+- **application:** Contains all related business logic.
+- **domain:** Contains all models(a.k.a types/dto for Typescript).
+- **infrastructure:** Contains all services required to interact with foreign services.
+- **presentation:** Contains all screens and components intended to render our data.
 
 It is an intended architecture, it can be used either globally or per application's feature.
 
@@ -143,11 +143,11 @@ e** tests.
 
 Run all **e2e** tests.
 
-### `pnpm format`
+### `pnpm format:lint`
 
 Format all your code by running `prettier` and `lint`.
 
-### `GH_TOKEN=your_token Pnpm release`
+### `GH_TOKEN=your_token pnpm release`
 
 Simulates the release process: it connects to Github(or Gitlab, based on your configuration), analyses all the commits, generale release notes, creates the tag and show you all the process. But it won't release anything on the repot.
 
