@@ -29,14 +29,6 @@ const parserPreset: LintOptions = {
 };
 
 const rules: QualifiedRules = {
-  // 'type-empty': [2, 'never'],
-  // 'type-case': [2, 'always', 'lower-case'],
-  // 'subject-empty': [2, 'never'],
-  // 'body-empty': [2, 'always'],
-  // 'footer-empty': [2, 'always'],
-  // 'references-empty': [2, 'never'],
-
-  "subject-full-stop": [2, "always", "."],
   "scope-case": [2, "always", "lower-case"],
   "type-enum": [2, "always", types],
   "body-max-line-length": [2, "always", 250],
