@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.2.4](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.3...v1.2.4) (2024-07-22)
+
+
+### Bug Fixes
+
+* removing full stop from release commit ([4452a55](https://github.com/SalahAdDin/react-ts-vite-template/commit/4452a557adfbc5527e62dd2032017fbb1e1d1ea4))
+* updating commitlint rules ([682de1a](https://github.com/SalahAdDin/react-ts-vite-template/commit/682de1a66acae205cb2c9af18b5b70db6a574c29))
+
 ## [1.2.3](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.2...v1.2.3) (2023-08-12)
 
 
