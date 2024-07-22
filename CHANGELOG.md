@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.5](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.4...v1.2.5) (2024-07-22)
+
+
+### Bug Fixes
+
+* :fire: removing deprecated husky command ([5f596f1](https://github.com/SalahAdDin/react-ts-vite-template/commit/5f596f10b62d90d6b68c16d79ed8932a65f5b68c))
+
 ## [1.2.4](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.3...v1.2.4) (2024-07-22)
 
 
