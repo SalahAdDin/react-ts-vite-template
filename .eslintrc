@@ -75,7 +75,7 @@
       "extends": [
         "plugin:jest-dom/recommended",
         "plugin:testing-library/react",
-        "plugin:vitest/all"
+        "plugin:vitest/legacy-recommended"
       ]
     },
     {
