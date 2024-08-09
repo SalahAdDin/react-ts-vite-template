@@ -40,6 +40,15 @@ export default (configEnv: ConfigEnv) => {
       coverage: {
         provider: "v8",
         reporter: ["text", "html"],
+        exclude: [
+          "src/application/utils/test-utils.tsx",
+          "playwright.config.ts",
+          "playwright-report",
+          "postcss.config.cjs",
+          "tailwind.config.ts",
+          "tests",
+          "vite.config.mts",
+        ],
         thresholds: {
           branches: 90,
           functions: 95,
