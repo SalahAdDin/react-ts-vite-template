@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.6](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.5...v1.2.6) (2024-08-09)
+
+
+### Bug Fixes
+
+* :wrench: remove ui from test coverage ([fd24421](https://github.com/SalahAdDin/react-ts-vite-template/commit/fd2442118e6573175b3a73226f57fe433bcbd232))
+
 ## [1.2.5](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.4...v1.2.5) (2024-07-22)
 
 
