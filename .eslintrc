@@ -16,6 +16,7 @@
     "airbnb-typescript",
     "plugin:react/jsx-runtime",
     "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:sonarjs/recommended-legacy",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -27,8 +28,20 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "@typescript-eslint", "vitest"],
+  "plugins": ["react", "@typescript-eslint", "vitest", "sonarjs"],
   "rules": {
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "generic"
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-expect-error": "allow-with-description"
+      }
+    ],
     "@typescript-eslint/comma-dangle": [
       "error",
       {
@@ -39,8 +52,20 @@
         "functions": "never"
       }
     ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/explicit-function-return-type": 1,
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "typeParameter",
+        "format": ["PascalCase"],
+        "custom": { "regex": "^T[A-Z]", "match": true }
+      }
+    ],
+    "@typescript-eslint/prefer-ts-expect-error": 2,
     "@typescript-eslint/quotes": ["error", "double"],
+    "@typescript-eslint/switch-exhaustiveness-check": 2,
     "comma-dangle": "off",
     "function-paren-newline": "warn",
     "implicit-arrow-linebreak": "warn",
@@ -60,6 +85,8 @@
       2,
       { "namedComponents": "arrow-function" }
     ],
+    "react/hook-use-state": 2,
+    "react/jsx-handler-names": 2,
     "react/require-default-props": [
       "error",
       {
@@ -76,7 +103,20 @@
         "plugin:jest-dom/recommended",
         "plugin:testing-library/react",
         "plugin:vitest/legacy-recommended"
-      ]
+      ],
+      "rules": {
+        "vitest/valid-title": [
+          "error",
+          {
+            "mustMatch": {
+              "it": [
+                "^should.*when.+$",
+                "Test title must include 'should' and 'when'"
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "files": ["tests/**/*.test.[tj]s?(x)"],

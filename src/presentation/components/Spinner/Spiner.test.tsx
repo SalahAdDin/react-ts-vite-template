@@ -20,7 +20,7 @@ describe("Spinner", () => {
     expect(svgElement).toHaveAttribute("viewBox", "0 0 100 101");
   });
 
-  it("should contains the loading path elements whe the it is rendered", () => {
+  it("should contains the loading path elements when it is rendered", () => {
     render(<Spinner />);
 
     const svgElement = screen.getByRole("img", { hidden: true });
