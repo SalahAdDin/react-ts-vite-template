@@ -1,9 +1,6 @@
 import client from "./client";
 
-const getSomething = async () => {
-  const result = await client.get("");
-  return result;
-};
+const getSomething = async () => client.get("");
 
 const service = { getSomething };
 
