@@ -33,6 +33,7 @@ const rules: QualifiedRules = {
   "type-enum": [2, "always", types],
   "body-max-line-length": [2, "always", 250],
   "header-max-length": [2, "always", 150],
+  "footer-max-line-length": [0, "always"] 
 };
 
 const Configuration: UserConfig = {
