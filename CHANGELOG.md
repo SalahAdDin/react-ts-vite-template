@@ -1,5 +1,18 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.6...v1.3.0) (2024-08-14)
+
+
+### Bug Fixes
+
+* :wrench: increase commit footer length ([4025336](https://github.com/SalahAdDin/react-ts-vite-template/commit/402533677d60627be54b30dfae3cba3067e0721b))
+* :wrench: remove ui from test coverage ([85d95e4](https://github.com/SalahAdDin/react-ts-vite-template/commit/85d95e472d2a614950bd7afd6cd162769593555e))
+
+
+### Features
+
+* :sparkles: update eslint for following typescript guidelines ([9748116](https://github.com/SalahAdDin/react-ts-vite-template/commit/97481161c8a614b7c3f1dc2022dd9797e26f04ad)), closes [#6](https://github.com/SalahAdDin/react-ts-vite-template/issues/6)
+
 ## [1.2.6](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.5...v1.2.6) (2024-08-09)
 
 
