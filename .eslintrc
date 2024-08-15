@@ -28,7 +28,7 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "@typescript-eslint", "vitest", "sonarjs"],
+  "plugins": ["react", "@typescript-eslint", "@vitest", "sonarjs"],
   "rules": {
     "@typescript-eslint/array-type": [
       "error",
@@ -102,10 +102,10 @@
       "extends": [
         "plugin:jest-dom/recommended",
         "plugin:testing-library/react",
-        "plugin:vitest/legacy-recommended"
+        "plugin:@vitest/legacy-all"
       ],
       "rules": {
-        "vitest/valid-title": [
+        "@vitest/valid-title": [
           "error",
           {
             "mustMatch": {

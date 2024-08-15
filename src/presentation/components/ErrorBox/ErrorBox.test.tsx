@@ -4,7 +4,7 @@ import ErrorBox from "./ErrorBox";
 
 const DUMMY_ERROR = "Connection Error with 400 code.";
 
-describe("ErrorBox", () => {
+describe("errorBox", () => {
   it("should render the ErrorBox component when a message is provided", () => {
     const message = DUMMY_ERROR;
     render(<ErrorBox message={message} />);

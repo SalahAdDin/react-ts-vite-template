@@ -2,7 +2,7 @@ import { render, screen } from "@application/utils/test-utils";
 
 import Spinner from "./Spinner";
 
-describe("Spinner", () => {
+describe("spinner", () => {
   it("should render the Spinner component when the it is rendered", () => {
     render(<Spinner />);
 
