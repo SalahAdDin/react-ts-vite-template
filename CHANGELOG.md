@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.3.1](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.3.0...v1.3.1) (2024-08-15)
+
+
+### Bug Fixes
+
+* :wrench: update estlin configuration for the latest vitest plugin v ([edc46fc](https://github.com/SalahAdDin/react-ts-vite-template/commit/edc46fc84d32777398d43517f21097b40df49600))
+
 # [1.3.0](https://github.com/SalahAdDin/react-ts-vite-template/compare/v1.2.6...v1.3.0) (2024-08-14)
 
 
