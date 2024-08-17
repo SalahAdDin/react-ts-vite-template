@@ -35,7 +35,6 @@
     "mocks",
     "src",
     "tests",
-    "eslint.config.js",
     "commitlint.config.cts",
     "playwright.config.ts",
     "tailwind.config.ts",
