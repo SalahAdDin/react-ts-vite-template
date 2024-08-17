@@ -4,7 +4,7 @@ import ErrorBox from "./ErrorBox";
 
 const DUMMY_ERROR = "Connection Error with 400 code.";
 
-describe("ErrorBox", () => {
+describe("errorBox", () => {
   it("should render the ErrorBox component when a message is provided", () => {
     const message = DUMMY_ERROR;
     render(<ErrorBox message={message} />);
@@ -37,15 +37,11 @@ describe("ErrorBox", () => {
 
     const headingElement = screen.getByRole("heading", { name: /Error/i });
     expect(headingElement).toBeInTheDocument();
-    expect(headingElement).toHaveClass(
-      "mt-12 text-3xl text-gray-800 md:text-4xl lg:text-5xl"
-    );
+    expect(headingElement).toHaveClass("mt-12 text-3xl text-gray-800 md:text-4xl lg:text-5xl");
 
     const messageElement = screen.getByText(message).parentElement;
 
     expect(messageElement).toBeInTheDocument();
-    expect(messageElement).toHaveClass(
-      "mt-8 text-gray-600 md:text-lg lg:text-xl"
-    );
+    expect(messageElement).toHaveClass("mt-8 text-gray-600 md:text-lg lg:text-xl");
   });
 });

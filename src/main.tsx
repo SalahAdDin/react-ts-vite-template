@@ -14,11 +14,12 @@ import reportWebVitals from "./reportWebVitals";
 
 const queryClient = new QueryClient();
 
-const QueryDevtools =  process.env.NODE_ENV === "production"
+const QueryDevtools =
+  process.env.NODE_ENV === "production"
     ? () => null
     : React.lazy(() => import("@tanstack/react-query-devtools").then((res) => ({
-          default: res.ReactQueryDevtools,
-        })));
+      default: res.ReactQueryDevtools,
+    })));
 
 /* const RouterDevtools =
   process.env.NODE_ENV === "production"
@@ -44,20 +45,18 @@ async function enableMocking() {
 
 enableMocking().then(
   () => {
-    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-      <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-          <App />
-          {/* <RouterProvider router={router} />
+    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <App />
+        {/* <RouterProvider router={router} />
           <RouterDevtools
             initialIsOpen={false}
             router={router}
             position="bottom-right"
           /> */}
-          <QueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
-      </React.StrictMode>
-    );
+        <QueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </React.StrictMode>);
   },
   () => {}
 );
