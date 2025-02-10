@@ -3,7 +3,7 @@ import path from "path";
 import { loadEnv } from "vite";
 import { coverageConfigDefaults, defineConfig } from "vitest/config";
 
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
