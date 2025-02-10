@@ -20,15 +20,15 @@ const QueryDevtools =  process.env.NODE_ENV === "production"
           default: res.ReactQueryDevtools,
         })));
 
-/* const RouterDevtools =
+/*
+const RouterDevtools =
   process.env.NODE_ENV === "production"
-    ? () => null // Render nothing in production
+    ? () => null
     : React.lazy(() =>
         import("@tanstack/router-devtools").then((res) => ({
           default: res.TanStackRouterDevtools,
         }))
-      ); 
-*/
+      ); */
 
 async function enableMocking() {
   if (process.env.NODE_ENV !== "development") {
@@ -48,13 +48,15 @@ enableMocking().then(
       <React.StrictMode>
         <QueryClientProvider client={queryClient}>
           <App />
-          {/* <RouterProvider router={router} />
-          <RouterDevtools
-            initialIsOpen={false}
-            router={router}
-            position="bottom-right"
-          /> */}
+          {/* <RouterProvider router={router} /> */}
           <QueryDevtools initialIsOpen={false} />
+          {/* <Suspense>
+            <RouterDevtools
+              initialIsOpen={false}
+              router={router}
+              position="bottom-left"
+            />
+          </Suspense> */}
         </QueryClientProvider>
       </React.StrictMode>
     );
