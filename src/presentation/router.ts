@@ -1,40 +1,39 @@
 /*
-import { createReactRouter, createRouteConfig, lazy } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  createRoute,
+  createRouter,
+  lazyRouteComponent,
+} from '@tanstack/react-router'
 
-import App from "./App";
+import Layout from './components/Layout'
 
-const UpdateUser = lazy(() => import("./views/UpdateUser"));
-const UserTable = lazy(() => import("./views/UserTable"));
+const rootRoute = createRootRoute({
+  component: Layout,
+  loader: () => ({ crumb: 'Task Management' }),
+})
 
-const rootRoute = createRouteConfig({
-  component: App,
-});
+const indexRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/',
+  component: lazyRouteComponent(() => import('./screens/Home')),
+  loader: () => ({
+    crumb: 'Home',
+  }),
+})
 
-const indexRoute = rootRoute.createRoute({
-  path: "/",
-  component: UserTable,
-});
+const editRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/edit/$id',
+  component: lazyRouteComponent(() => import('./screens/Edit')),
+  loader: () => ({
+    crumb: 'Edit',
+  }),
+})
 
-const updateRoute = rootRoute.createRoute({ path: "update" });
+const routeTree = rootRoute.addChildren([indexRoute, editRoute])
 
-const createRoute = updateRoute.createRoute({
-  path: "/",
-  component: UpdateUser,
-});
-
-const editRoute = updateRoute.createRoute({
-  path: "$userId",
-  component: UpdateUser,
-});
-
-const routeConfig = rootRoute.addChildren([
-  indexRoute,
-  updateRoute.addChildren([createRoute, editRoute]),
-]);
-
-const router = createReactRouter({ routeConfig });
-
-export { editRoute, indexRoute };
+const router = createRouter({ routeTree })
 */
 
 const router = {};
