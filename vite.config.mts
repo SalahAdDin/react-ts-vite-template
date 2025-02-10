@@ -1,22 +1,17 @@
 import path from "path";
 
-import million from "million/compiler";
 import { loadEnv } from "vite";
-import type { ConfigEnv } from "vite";
-import { defineConfig } from "vitest/config";
+import { coverageConfigDefaults, defineConfig } from "vitest/config";
 
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
-export default (configEnv: ConfigEnv) => {
-  process.env = {
-    ...process.env,
-    ...loadEnv(configEnv.mode, process.cwd(), "VITE_"),
-  };
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
 
-  return defineConfig({
-    base: process.env.VITE_APP_BASE_URL,
-    plugins: [million.vite({ auto: true }), react()],
+  return {
+    base: env.VITE_APP_BASE_URL,
+    plugins: [react()],
     css: {
       devSourcemap: true,
     },
@@ -35,19 +30,14 @@ export default (configEnv: ConfigEnv) => {
       clearMocks: true,
       css: true,
       include: ["src/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
-      exclude: ["src/tests"],
+      exclude: ["tests"],
       watch: false,
       coverage: {
         provider: "v8",
         reporter: ["text", "html"],
         exclude: [
+          ...coverageConfigDefaults.exclude,
           "src/application/utils/test-utils.tsx",
-          "playwright.config.ts",
-          "playwright-report",
-          "postcss.config.cjs",
-          "tailwind.config.ts",
-          "tests",
-          "vite.config.mts",
         ],
         thresholds: {
           branches: 90,
@@ -62,8 +52,8 @@ export default (configEnv: ConfigEnv) => {
     },
     server: {
       open: true,
-      host: process.env.VITE_SERVER_HOST,
-      port: Number(process.env.VITE_SERVER_PORT),
+      host: env.VITE_SERVER_HOST,
+      port: Number(env.VITE_SERVER_PORT),
     },
-  });
-};
+  };
+});
