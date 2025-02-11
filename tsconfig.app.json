@@ -50,6 +50,6 @@
     "commitlint.config.cts",
     "playwright.config.ts",
     "tailwind.config.ts",
-    "vite.config.mts"
+    "vite.config.ts"
   ]
 }
