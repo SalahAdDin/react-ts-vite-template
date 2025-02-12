@@ -1,8 +1,10 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import tanStackQuery from "@tanstack/eslint-plugin-query";
+import tsParser from "@typescript-eslint/parser";
 import vitest from "@vitest/eslint-plugin";
 import prettier from "eslint-config-prettier";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import jestDOM from "eslint-plugin-jest-dom";
 import jsxA11y from "eslint-plugin-jsx-a11y";
@@ -19,6 +21,11 @@ export default tseslint.config(
   { ignores: ["coverage", "dist"] },
   sonarjs.configs.recommended,
   {
+    extends: [importX.flatConfigs.recommended],
+    languageOptions: {
+      parser: tsParser,
+      ecmaVersion: "latest",
+    },
     plugins: {
       "@stylistic": stylistic,
     },
@@ -34,8 +41,26 @@ export default tseslint.config(
           functions: "never",
         },
       ],
+      "@stylistic/function-paren-newline": "warn",
+      "@stylistic/implicit-arrow-linebreak": "warn",
+      "@stylistic/linebreak-style": ["error", "unix"],
+      "@stylistic/operator-linebreak": "warn",
+      "@stylistic/object-curly-newline": [
+        "error",
+        {
+          ExportDeclaration: { multiline: true, minProperties: 5 },
+        },
+      ],
       "@stylistic/quotes": ["error", "double"],
       "@stylistic/semi": ["error", "always"],
+    },
+    settings: {
+      "import-x/resolver-next": [
+        createTypeScriptImportResolver({
+          alwaysTryTypes: true,
+          project: ["./tsconfig.app.json", "./tsconfig.node.json"],
+        }),
+      ],
     },
   },
   {
@@ -46,9 +71,7 @@ export default tseslint.config(
       jsxA11y.flatConfigs.recommended,
       ...tanStackQuery.configs["flat/recommended"],
       react.configs.flat["jsx-runtime"],
-      importX.flatConfigs.recommended,
       importX.flatConfigs.typescript,
-      prettier,
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -59,6 +82,7 @@ export default tseslint.config(
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      "@stylistic": stylistic,
     },
     rules: {
       "@typescript-eslint/array-type": [
@@ -73,7 +97,6 @@ export default tseslint.config(
           "ts-expect-error": "allow-with-description",
         },
       ],
-
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/explicit-function-return-type": 1,
       "@typescript-eslint/naming-convention": [
@@ -84,24 +107,14 @@ export default tseslint.config(
           custom: { regex: "^T[A-Z]", match: true },
         },
       ],
-      "@typescript-eslint/prefer-ts-expect-error": 2,
+      // https://typescript-eslint.io/getting-started/typed-linting/
       // "@typescript-eslint/switch-exhaustiveness-check": 2,
-      "function-paren-newline": "warn",
-      "implicit-arrow-linebreak": "warn",
       "import-x/no-extraneous-dependencies": [
         "error",
         { devDependencies: true },
       ],
       "import-x/no-unresolved": "error",
       "indent": "off",
-      "linebreak-style": ["error", "unix"],
-      "object-curly-newline": [
-        "error",
-        {
-          ExportDeclaration: { multiline: true, minProperties: 5 },
-        },
-      ],
-      "operator-linebreak": "warn",
       "react/function-component-definition": [
         2,
         { namedComponents: "arrow-function" },
@@ -150,5 +163,6 @@ export default tseslint.config(
     rules: {
       ...playwright.configs["flat/recommended"].rules,
     },
-  }
+  },
+  prettier
 );
