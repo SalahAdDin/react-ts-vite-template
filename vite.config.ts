@@ -3,6 +3,7 @@ import path from "path";
 import { loadEnv } from "vite";
 import { coverageConfigDefaults, defineConfig } from "vitest/config";
 
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
@@ -11,7 +12,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: env["VITE_APP_BASE_URL"],
-    plugins: [react()],
+    plugins: [tailwindcss(), react()],
     css: {
       devSourcemap: true,
     },

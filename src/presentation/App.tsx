@@ -1,7 +1,7 @@
 // import { Outlet } from "@tanstack/react-router";
 
 const App = () => (
-  <div className="container my-8 max-w-screen-lg">
+  <div className="container my-8 max-w-(--breakpoint-lg)">
     {/*
     <Suspense
       fallback={
