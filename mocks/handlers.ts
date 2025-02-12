@@ -1,15 +1,17 @@
-import { http } from "msw";
+import { http, HttpResponse } from "msw";
 
 // import users from "./entities/users.json" assert { type: "json" };
 // import shuffleArray from "./utils";
 
 const handlers = [
-  http.get("/users", () => {}),
+  http.get("/users", () => {
+    return HttpResponse.json({ name: "John" });
+  }),
 
   /*
-  rest.get("/user/:id", (req, res, ctx) => {}),
+  http.get("/user/:id", (req, res, ctx) => {}),
 
-  rest.post<IBaseUser>("/user/create", async (req, res, ctx) => {
+  http.post<IBaseUser>("/user/create", async (req, res, ctx) => {
     const body = await req.json();
 
     if (body?.firstName) {
@@ -26,7 +28,7 @@ const handlers = [
     return res(ctx.status(400));
   }),
 
-  rest.patch<IUser>("/user/update", async (req, res, ctx) => {
+  http.patch<IUser>("/user/update", async (req, res, ctx) => {
     const body = await req.json();
 
     if (body?.id) {
@@ -37,7 +39,7 @@ const handlers = [
     return res(ctx.status(400));
   }),
 
-  rest.delete("/user/:id", (req, res, ctx) => {
+  http.delete("/user/:id", (req, res, ctx) => {
     const { id } = req.params;
 
     if (id) {

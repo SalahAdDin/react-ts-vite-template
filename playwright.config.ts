@@ -1,10 +1,10 @@
 import path from "path";
 import { fileURLToPath } from "url";
 
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 
-import { defineConfig, devices } from "@playwright/test";
 import type { PlaywrightTestConfig } from "@playwright/test";
+import { defineConfig, devices } from "@playwright/test";
 
 const fileName = fileURLToPath(import.meta.url);
 const dirName = path.dirname(fileName);

@@ -1,9 +1,13 @@
 const shuffleArray = <TInput>(array: Array<TInput>): Array<TInput> => {
-  const result = Array<TInput>(array.length);
+  const result = [...array];
 
-  for (let i = array.length - 1; i > 0; i = -1) {
-    const j = Math.floor(Math.random() * (i + 1)); // 0 <= j <= i
-    result[j] = array[i];
+  const cryptoArray = new Uint32Array(1);
+
+  for (let i = result.length - 1; i > 0; i--) {
+    crypto.getRandomValues(cryptoArray);
+    const j = cryptoArray[0] % (i + 1);
+
+    [result[i], result[j]] = [result[j], result[i]];
   }
 
   return result;
