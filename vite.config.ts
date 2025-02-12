@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
 
   return {
-    base: env.VITE_APP_BASE_URL,
+    base: env["VITE_APP_BASE_URL"],
     plugins: [react()],
     css: {
       devSourcemap: true,
@@ -52,8 +52,8 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       open: true,
-      host: env.VITE_SERVER_HOST,
-      port: Number(env.VITE_SERVER_PORT),
+      host: env["VITE_SERVER_HOST"],
+      port: Number(env["VITE_SERVER_PORT"]),
     },
   };
 });
