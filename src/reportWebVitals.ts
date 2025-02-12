@@ -10,7 +10,9 @@ const reportWebVitals = (onPerfEntry?: (metric: MetricType) => void) => {
         onLCP(onPerfEntry);
         onTTFB(onPerfEntry);
       })
-      .catch(() => {});
+      .catch((error) => {
+        throw new Error(`Report Web Vitals: \n:${error}`);
+      });
   }
 };
 
